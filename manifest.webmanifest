@@ -1,0 +1,9 @@
+{
+  "name": "LuckyTools iPhone",
+  "short_name": "LuckyTools",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0c0f16",
+  "theme_color": "#10131b",
+  "description": "Lokaler Datei-Check für APK- und IPA-Dateien."
+}

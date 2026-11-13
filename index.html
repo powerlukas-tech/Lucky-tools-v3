@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10131b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="LuckyTools">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>LuckyTools</title>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><div class="mark">L</div><div><b>LuckyTools</b><small>iPhone App Toolkit</small></div></div>
+  <span class="pill">iOS Edition</span>
+</header>
+<main>
+  <section class="hero">
+    <p class="eyebrow">APP MANAGEMENT</p>
+    <h1>Deine Apps.<br><span>Alles im Blick.</span></h1>
+    <p class="muted">Dateien prüfen, Informationen anzeigen und deine eigene App-Sammlung verwalten.</p>
+    <button class="primary" id="choose">＋ Datei analysieren</button>
+    <input id="file" type="file" accept=".apk,.ipa,.zip,application/vnd.android.package-archive,application/zip" hidden>
+    <p class="hint">Unterstützt APK- und IPA-Dateien zur lokalen Basisanalyse.</p>
+  </section>
+
+  <section class="stats">
+    <article><strong id="count">0</strong><span>Analysierte Dateien</span></article>
+    <article><strong id="total">0 B</strong><span>Gesamtgröße</span></article>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>Werkzeuge</h2><span class="muted">iOS-kompatibel</span></div>
+    <div class="tools">
+      <article class="tool"><div class="tool-icon">⌕</div><b>Datei-Check</b><p>Format, Größe und SHA-256-Prüfsumme anzeigen.</p><span class="tag">Verfügbar</span></article>
+      <article class="tool"><div class="tool-icon">▤</div><b>App-Sammlung</b><p>Analysierte Dateien in dieser Sitzung ansehen.</p><span class="tag">Verfügbar</span></article>
+      <article class="tool disabled"><div class="tool-icon">◇</div><b>App-Patching</b><p>Andere iPhone-Apps dürfen nicht verändert werden.</p><span class="tag muted">iOS-Sperre</span></article>
+      <article class="tool disabled"><div class="tool-icon">⌑</div><b>Lizenz-Bypass</b><p>Kein Umgehen von Käufen oder Lizenzprüfungen.</p><span class="tag muted">Nicht enthalten</span></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>Letzte Analysen</h2><button class="text-btn" id="clear">Leeren</button></div>
+    <div id="empty" class="empty">Noch keine Dateien analysiert.<br>Wähle oben eine APK oder IPA aus.</div>
+    <div id="results" class="results"></div>
+  </section>
+
+  <section class="notice">
+    <b>Wichtig zu iOS</b>
+    <p>Diese Web-App kann Dateien untersuchen, aber keine installierten iPhone-Apps auslesen, verändern oder deren In-App-Käufe beeinflussen. Die Analyse findet lokal im Browser statt; die Datei wird nicht hochgeladen.</p>
+  </section>
+</main>
+<footer>LuckyTools · Privater Datei-Check · Kein offizielles Lucky-Patcher-Produkt</footer>
+<script src="app.js"></script>
+</body>
+</html>
